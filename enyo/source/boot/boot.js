@@ -104,7 +104,7 @@
 
 		/**
 		* Loads one or more scripts, stylesheets, or `package.js` files at runtime.
-		* 
+		*
 		* If called during load time (before the `DOMContentLoaded` event), this may only be used
 		* to load a single script and stylesheet file.  Using it to load a `package.js` file or
 		* providing an [array]{@glossary Array} of files can disrupt normal `package.js` handling.
@@ -132,19 +132,7 @@
 				}
 			}
 		};
-		/**
-		* 
-		*  loader for the AresM
-		* 
-		*/
-		enyo.aresload = function(depends, callback) {
-			runtimeLoadQueue.push(arguments);
-			if (!enyo.runtimeLoading) {
-				enyo.runtimeLoading = true;
-				runtimeLoad();
-			}
-		};
-		
+
 		/**
 		* @private
 		*/
@@ -177,7 +165,7 @@
 			}
 		}
 	})();
-	
+
 	/**
 	* Predefined path aliases.
 	*
@@ -187,5 +175,5 @@
 		enyo: enyo.args.root,
 		lib: '$enyo/../lib'
 	});
-	
+
 })(enyo, this);
